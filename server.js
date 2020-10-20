@@ -19,11 +19,11 @@ const app = express();
 const morgan = require("morgan");
 
 //misc
-// const runnerController = require('./controllers/runner.js')
-// app.use('/runners', runnerController)
+const runnerRouter = require('./controllers/runner.js')
 
-// const shoesController = require('./controllers/shoes.js')
-// app.use('/shoes', shoesController)
+
+const shoeRouter = require('./controllers/shoes.js')
+
 
 //middleware
 app.use(express.json());
@@ -36,7 +36,8 @@ app.get("/", (req, res) => {
 });
 
 //Runner routes to send to run router
-// app.use("/runner", runnerRouter)
+app.use("/runners", runnerRouter)
+app.use("/shoes", shoeRouter)
 
 //Listener
 app.listen(PORT, () => {
