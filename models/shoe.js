@@ -10,6 +10,6 @@ const shoesSchema = new Schema(
     { timestamps: true }
 );
 
-const Shoes = model("Shoes", shoesSchema);
+const Shoes = model("shoes", shoesSchema);
 
 module.exports = Shoes;
