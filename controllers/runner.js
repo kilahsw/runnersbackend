@@ -1,10 +1,11 @@
 const Runner = require("../models/runner");
 const { Router } = require("express");
 const router = Router();
+const mongoose = require("mongoose")
 
 //index route
 router.get("/", async (req, res) => {
-    res.json(await Runner.find({}));
+    res.json(await Runner.find({}).populate("Shoes"));
 });
 
 //create route
