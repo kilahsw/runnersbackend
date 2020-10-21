@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose")
 
-const runnerSchema = new Schema(
+const runnersSchema = new Schema(
     {
         name: String,
         runStyle: String,
@@ -8,6 +8,6 @@ const runnerSchema = new Schema(
     { timestamps: true }
 );
 
-const Runner = model("Runner", runnerSchema);
+const Runners = model("Runners", runnersSchema);
 
-module.exports = Runner;
+module.exports = Runners;

@@ -21,7 +21,6 @@ const morgan = require("morgan");
 //misc
 const runnerRouter = require('./controllers/runner.js')
 
-
 const shoeRouter = require('./controllers/shoes.js')
 
 

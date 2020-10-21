@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose")
 
-const shoeSchema = new Schema(
+const shoesSchema = new Schema(
     {
         name: String,
         runType: String,
@@ -9,6 +9,6 @@ const shoeSchema = new Schema(
     { timestamps: true }
 );
 
-const Shoe = model("Shoe", shoeSchema);
+const Shoes = model("Shoes", shoesSchema);
 
-module.exports = Shoe;
+module.exports = Shoes;
